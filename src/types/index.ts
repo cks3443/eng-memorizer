@@ -36,3 +36,20 @@ export interface StudyStats {
   streakDays: number;
   lastStudyDate?: Date;
 }
+
+export interface User {
+  id: number;
+  email: string;
+  name?: string;
+  preferredLanguage: 'ko' | 'en';
+  timezone: string;
+  dailyGoal: number; // target sentences per day
+  reminderEnabled: boolean;
+  reminderTime?: string; // HH:MM format
+  currentStreak: number;
+  longestStreak: number;
+  totalStudyTime: number; // in minutes
+  createdAt: Date;
+  updatedAt: Date;
+  lastLoginAt?: Date;
+}
